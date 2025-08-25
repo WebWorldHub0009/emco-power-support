@@ -23,6 +23,7 @@ import { Link } from "react-router-dom";
 import VisitorCounter from "./VisitorCounter";
 import Translator from "./Translator";
 import bg from "../assets/images/service/rbg.avif"
+import logo from "../assets/elogo.png"
 
 const containerVariants = {
   hidden: { opacity: 0, y: 50 },
@@ -75,7 +76,12 @@ export default function Footer() {
       <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 text-sm text-gray-800">
         {/* About Section */}
         <div className="flex flex-col space-y-3">
-          <h4 className="font-bold text-4xl text-red-800 mb-2">
+           <img
+            src={logo}
+            alt="EMCO Power Support Logo"
+            className="w-32 mb-8"
+          />
+          <h4 className="font-bold text-3xl text-red-800 mb-2">
             EMCO Power Support
           </h4>
           <p className="leading-relaxed">
@@ -107,7 +113,7 @@ export default function Footer() {
 
         {/* Quick Links */}
         <div>
-          <h4 className="font-bold text-4xl mb-4 text-red-800">Quick Links</h4>
+          <h4 className="font-bold text-3xl mb-4 text-red-800">Quick Links</h4>
           <ul className="space-y-2">
             {[
               ["Home", "/", <FaHome />],
@@ -126,7 +132,7 @@ export default function Footer() {
             ))}
           </ul>
 
-          <h4 className="mt-6 font-bold text-4xl text-red-800">Emails</h4>
+          <h4 className="mt-6 font-bold text-3xl text-red-800">Emails</h4>
           <ul className="mt-2 space-y-2">
             {["Info@emcopowersupport.com", "emcopowers@gmail.com"].map(
               (email, i) => (
@@ -146,7 +152,7 @@ export default function Footer() {
 
         {/* Products */}
         <div>
-          <h4 className="font-bold text-4xl mb-4 text-red-800">Our Products</h4>
+          <h4 className="font-bold text-3xl mb-4 text-red-800">Our Products</h4>
           <ul className="space-y-2">
             {products.map(({ name, icon, link }, i) => (
               <li key={i} className="flex items-center">
@@ -169,7 +175,7 @@ export default function Footer() {
 
         {/* Contact Info */}
         <div>
-          <h4 className="font-bold text-4xl mb-4 text-red-800">
+          <h4 className="font-bold text-3xl mb-4 text-red-800">
             Contact Info
           </h4>
           <address className="not-italic leading-relaxed mb-4 text-gray-800 text-sm">
