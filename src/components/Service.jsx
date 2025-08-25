@@ -7,7 +7,7 @@ import { FaCubes, FaBolt, FaLayerGroup, FaPuzzlePiece } from "react-icons/fa";
 // Example product images (replace with actual)
 import prod1 from "../assets/images/service/cbc.jpg";
 import prod2 from "../assets/images/service/ms.jpg";
-import prod3 from "../assets/images/service/mst.jpg";
+import prod3 from "../assets/images/service/Mst.jpg";
 import prod4 from "../assets/images/service/pct.jpg";
 import prod5 from "../assets/images/service/pa.jpg";
 import prod6 from "../assets/images/service/pcbs.jpg";
