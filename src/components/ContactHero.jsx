@@ -6,7 +6,7 @@ import logo from "../assets/elogo.png"; // ✅ Add your company logo here
 const Hero = () => {
   return (
     <section
-      className="relative w-full h-[90vh] flex items-center justify-center text-white overflow-hidden"
+      className="relative w-full min-h-screen md:h-[80vh] flex items-center justify-center text-white overflow-hidden"
       style={{
         backgroundImage: `url(${heroBg})`,
         backgroundSize: "cover",
@@ -26,7 +26,7 @@ const Hero = () => {
         <motion.img
           src={logo}
           alt="EMCO Power Support"
-          className="mx-auto mb-6 w-32 md:w-40 drop-shadow-lg"
+          className="mx-auto mb-3 w-28 md:w-28 drop-shadow-lg"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.2, ease: "easeOut" }}
@@ -43,7 +43,7 @@ const Hero = () => {
         </h1>
 
         {/* Premium Tagline */}
-        <p className="text-lg md:text-xl text-gray-300 font-light mb-10 max-w-3xl mx-auto leading-relaxed">
+        <p className="text-md md:text-md text-gray-300 font-light mb-2 max-w-3xl mx-auto leading-relaxed">
           For over a decade, <span className="text-[#D4AF37] font-semibold">EMCO Power Support</span> has been the trusted partner in delivering
           world-class <span className="text-red-700">power support solutions</span>.  
           With a commitment to safety, durability, and engineering excellence, we empower industries to build a future that lasts.
@@ -53,13 +53,13 @@ const Hero = () => {
         <div className="flex flex-wrap justify-center gap-5">
           <a
             href="tel:+917011129058"
-            className="px-8 py-3 bg-[#D4AF37] text-black font-semibold rounded-full shadow-2xl hover:bg-[#b8962f] hover:scale-105 transition-all duration-500"
+            className="px-6 py-2 bg-[#D4AF37] text-black font-semibold rounded-full shadow-2xl hover:bg-[#b8962f] hover:scale-105 transition-all duration-500"
           >
             📞 Call Us Today
           </a>
           <a
             href="/products"
-            className="px-8 py-3 border border-[#D4AF37] text-[#D4AF37] font-semibold rounded-full hover:bg-[#D4AF37] hover:text-black hover:scale-105 transition-all duration-500"
+            className="px-6 py-2 border border-[#D4AF37] text-[#D4AF37] font-semibold rounded-full hover:bg-[#D4AF37] hover:text-black hover:scale-105 transition-all duration-500"
           >
             Explore Products →
           </a>
