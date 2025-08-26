@@ -7,6 +7,10 @@ import FloatingButtons from './components/FloatingButtons'
 import Footer from './components/Footer'
 import About from './pages/About'
 import Contact from './pages/Contact'
+import Certificate from './pages/Certificate'
+import ProductDetails from './pages/ProducrDetails'
+import ProductSection from './pages/ProductSection'
+
 
 const App = () => {
   return (
@@ -17,6 +21,9 @@ const App = () => {
     <Route path='/' element={<Home/>}/>
      <Route path='/about' element={<About/>}/>
       <Route path='/contact' element={<Contact/>}/>
+         <Route path='/products' element={<ProductSection/>}/>
+          <Route path='/products/:slug' element={<ProductDetails/>}/> 
+       <Route path='/certification' element={<Certificate/>}/>
     </Routes>
     <FloatingButtons/>
     <Footer/>

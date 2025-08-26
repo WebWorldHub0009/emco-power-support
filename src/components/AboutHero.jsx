@@ -33,8 +33,8 @@ export default function AboutHero() {
             We provide a comprehensive range of <span className="font-semibold">insulators</span>,  
             <span className="font-semibold"> busbar supports</span>,  
             <span className="font-semibold"> wholesale electrical products</span>,  
-            and <span className="font-semibold">vital factory equipment</span>  
-            to power your projects with unmatched quality.
+            and <span className="font-semibold">vital factory equipment </span>  
+             to power your projects with unmatched quality.
           </p>
 
           {/* Feature Highlights */}

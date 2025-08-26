@@ -6,7 +6,8 @@ import logo from "../assets/elogo.png"; // ✅ Add your company logo here
 const Hero = () => {
   return (
     <section
-      className="relative w-full min-h-screen md:h-[80vh] flex items-center justify-center text-white overflow-hidden"
+     className="relative w-full min-h-screen md:min-h-0 md:h-[80vh] flex items-center justify-center text-white overflow-hidden"
+
       style={{
         backgroundImage: `url(${heroBg})`,
         backgroundSize: "cover",

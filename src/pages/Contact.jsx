@@ -1,7 +1,6 @@
 import React from 'react'
 import ContactHero from '../components/ContactHero'
 import bg from "../assets/images/home/ev1.jpg"
-import { motion } from 'framer-motion'
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaMapMarkerAlt, FaYoutube, FaGlobe } from 'react-icons/fa'
 import MapSection from '../components/MapSection'
 
@@ -14,12 +13,7 @@ const Contact = () => {
       <section className="w-full min-h-screen flex flex-col lg:flex-row bg-[#F7F5F2] text-[#1C1C1C] mt-1 font-body">
         
         {/* Left Panel: Info */}
-        <motion.div
-          initial={{ x: -80, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.8 }}
-          className="w-full lg:w-1/2 bg-[#faf7f7] px-8 py-16 shadow-2xl"
-        >
+        <div className="w-full lg:w-1/2 bg-[#faf7f7] px-8 py-16 shadow-2xl">
           <h2 className="text-4xl font-cursive1 font-bold mb-6 pb-3 inline-block border-b-4 border-red-800 text-red-800">
             Let’s Connect
           </h2>
@@ -76,15 +70,10 @@ const Contact = () => {
               />
             ))}
           </div>
-        </motion.div>
+        </div>
 
         {/* Right Panel: Form */}
-        <motion.div
-          initial={{ x: 80, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.8 }}
-          className="w-full lg:w-1/2 relative flex items-center justify-center shadow-2xl"
-        >
+        <div className="w-full lg:w-1/2 relative flex items-center justify-center shadow-2xl">
           {/* Background Image */}
           <div
             className="absolute inset-0 bg-cover bg-center"
@@ -93,82 +82,82 @@ const Contact = () => {
           <div className="absolute inset-0 bg-black/80" />
 
           {/* Form */}
-        <form
-  action="https://formsubmit.co/emcopowers@gmail.com"
-  method="POST"
-  className="relative z-10 w-full max-w-lg px-8 py-12"
->
-  <h3 className="text-2xl font-cursive2 font-bold text-red-800 mb-6 border-b-2 border-red-800 inline-block">
-    Get in Touch
-  </h3>
-  
-  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
-    <input
-      type="text"
-      name="name"
-      placeholder="Your Name"
-      required
-      className="bg-transparent border-b border-gray-400 text-white placeholder-gray-400 py-2 focus:border-red-800 outline-none"
-    />
-    <input
-      type="email"
-      name="email"
-      placeholder="Your Email"
-      required
-      className="bg-transparent border-b border-gray-400 text-white placeholder-gray-400 py-2 focus:border-red-800 outline-none"
-    />
-    <input
-      type="text"
-      name="phone"
-      placeholder="Phone"
-      required
-      className="bg-transparent border-b border-gray-400 text-white placeholder-gray-400 py-2 focus:border-red-800 outline-none"
-    />
+          <form
+            action="https://formsubmit.co/emcopowers@gmail.com"
+            method="POST"
+            className="relative z-10 w-full max-w-lg px-8 py-12"
+          >
+            <h3 className="text-2xl font-cursive2 font-bold text-red-800 mb-6 border-b-2 border-red-800 inline-block">
+              Get in Touch
+            </h3>
+            
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+              <input
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                required
+                className="bg-transparent border-b border-gray-400 text-white placeholder-gray-400 py-2 focus:border-red-800 outline-none"
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                required
+                className="bg-transparent border-b border-gray-400 text-white placeholder-gray-400 py-2 focus:border-red-800 outline-none"
+              />
+              <input
+                type="text"
+                name="phone"
+                placeholder="Phone"
+                required
+                className="bg-transparent border-b border-gray-400 text-white placeholder-gray-400 py-2 focus:border-red-800 outline-none"
+              />
 
-    {/* Products Dropdown */}
-    <select
-      name="product"
-      required
-      className="bg-transparent border-b border-gray-400 text-white py-2 focus:border-red-800 outline-none"
-    >
-      <option value="" disabled selected className="text-gray-400">
-        Select Product
-      </option>
-      <option value="Busbar Supports" className="text-black">Busbar Supports</option>
-      <option value="Metal Spacer" className="text-black">Metal Spacer</option>
-      <option value="Metering CT" className="text-black">Metering CT</option>
-      <option value="Protection CT" className="text-black">Protection CT</option>
-      <option value="Panel Accessories" className="text-black">Panel Accessories</option>
-      <option value="PCB Spacers" className="text-black">PCB Spacers</option>
-      <option value="FRP Products" className="text-black">FRP Products</option>
-      <option value="MV Insulators" className="text-black">MV Insulators</option>
-      <option value="LV Busbar Connector" className="text-black">LV Busbar Connector</option>
-      <option value="LV Insulators" className="text-black">LV Insulators</option>
-    </select>
+              {/* Products Dropdown */}
+              <select
+                name="product"
+                required
+                className="bg-transparent border-b border-gray-400 text-white py-2 focus:border-red-800 outline-none"
+              >
+                <option value="" disabled selected className="text-gray-400">
+                  Select Product
+                </option>
+                <option value="Busbar Supports" className="text-black">Busbar Supports</option>
+                <option value="Metal Spacer" className="text-black">Metal Spacer</option>
+                <option value="Metering CT" className="text-black">Metering CT</option>
+                <option value="Protection CT" className="text-black">Protection CT</option>
+                <option value="Panel Accessories" className="text-black">Panel Accessories</option>
+                <option value="PCB Spacers" className="text-black">PCB Spacers</option>
+                <option value="FRP Products" className="text-black">FRP Products</option>
+                <option value="MV Insulators" className="text-black">MV Insulators</option>
+                <option value="LV Busbar Connector" className="text-black">LV Busbar Connector</option>
+                <option value="LV Insulators" className="text-black">LV Insulators</option>
+              </select>
 
-    <textarea
-      name="message"
-      placeholder="Your Message"
-      required
-      rows={4}
-      className="col-span-full bg-transparent border-b border-gray-400 text-white placeholder-gray-400 py-2 focus:border-red-800 outline-none"
-    />
-  </div>
+              <textarea
+                name="message"
+                placeholder="Your Message"
+                required
+                rows={4}
+                className="col-span-full bg-transparent border-b border-gray-400 text-white placeholder-gray-400 py-2 focus:border-red-800 outline-none"
+              />
+            </div>
 
-  <button
-    type="submit"
-    className="w-full bg-red-800 text-white py-3 font-body font-semibold rounded-full hover:bg-red-900 transition duration-300 shadow-lg"
-  >
-    Send Message
-  </button>
+            <button
+              type="submit"
+              className="w-full bg-red-800 text-white py-3 font-body font-semibold rounded-full hover:bg-red-900 transition duration-300 shadow-lg"
+            >
+              Send Message
+            </button>
 
-  {/* Formsubmit config */}
-  <input type="hidden" name="_captcha" value="false" />
-  <input type="hidden" name="_next" value="https://www.emcopowersupport.com/" />
-</form>
-
-        </motion.div>
+            {/* Formsubmit config */}
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_next" value="https://www.emcopowersupport.com/" />
+          </form>
+        </div>
       </section>
+
       <MapSection/>
     </>
   )

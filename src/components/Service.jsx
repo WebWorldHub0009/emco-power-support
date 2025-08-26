@@ -109,7 +109,7 @@ export default function ProductSection() {
         <p className="text-red-800 uppercase font-semibold font-cursive1 tracking-widest text-sm">
           Our Premium Products
         </p>
-        <h2 className="mt-3 text-4xl md:text-5xl font-extrabold text-red-800 leading-tight">
+        <h2 className="mt-3 text-4xl md:text-5xl font-extrabold text-[#D4AF37] leading-tight">
           EMCO Power Support Range
         </h2>
         <p className="mt-4 text-gray-600 text-lg">
@@ -143,7 +143,7 @@ export default function ProductSection() {
                     {product.title}
                   </h4>
                   <p className="mt-2 text-sm text-gray-600">{product.description}</p>
-                  <button className="mt-3 text-xs text-red-800 border border-red-800 px-3 py-1 rounded-full hover:bg-red-800 hover:text-white transition">
+                  <button className="mt-3 text-xs cursor-pointer text-red-800 border border-red-800 px-3 py-1 rounded-full hover:bg-red-800 hover:text-white transition">
                     Read More
                   </button>
                 </div>

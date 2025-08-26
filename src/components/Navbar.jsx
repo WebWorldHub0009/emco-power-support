@@ -5,11 +5,9 @@ import {
   FaSearch,
   FaPhoneAlt,
   FaEnvelope,
-  FaFileAlt,
   FaHome,
   FaInfoCircle,
   FaBoxOpen,
-  FaServicestack,
   FaPhoneSquareAlt,
   FaCertificate,
 } from "react-icons/fa";
@@ -18,21 +16,14 @@ import logo from "../assets/elogo.png";
 const Navbar = () => {
   const [searchOpen, setSearchOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [quoteOpen, setQuoteOpen] = useState(false);
 
   const handleSearchToggle = () => setSearchOpen(!searchOpen);
-
-  const handleBrochureDownload = () => {
-    const link = document.createElement("a");
-    link.href = "/brochure.pdf"; // Replace with your PDF path
-    link.download = "EmcoPower_Brochure.pdf";
-    link.click();
-  };
 
   const navLinks = [
     { name: "Home", path: "/", icon: <FaHome /> },
     { name: "About", path: "/about", icon: <FaInfoCircle /> },
     { name: "Products", path: "/products", icon: <FaBoxOpen /> },
-    { name: "Services", path: "/services", icon: <FaServicestack /> },
     { name: "Contact", path: "/contact", icon: <FaPhoneSquareAlt /> },
     { name: "Certification", path: "/certification", icon: <FaCertificate /> },
   ];
@@ -40,8 +31,7 @@ const Navbar = () => {
   return (
     <header className="w-full font-sans shadow-md">
       {/* 🔹 Top Header */}
-      <div className="bg-red-700 text-white text-xs sm:text-xs py-1  px-3 flex flex-col md:flex-row justify-between items-center gap-2">
-        {/* Left */}
+      <div className="bg-red-700 text-white text-xs sm:text-xs py-1 px-3 flex flex-col md:flex-row justify-between items-center gap-2">
         <div className="flex flex-wrap items-center gap-4">
           <a
             href="tel:+917011129058"
@@ -56,8 +46,6 @@ const Navbar = () => {
             <FaEnvelope className="text-[11px]" /> emcopowers@gmail.com
           </a>
         </div>
-
-        {/* Right */}
         <div className="flex flex-wrap items-center gap-4 text-xs sm:text-xs">
           <span>UDYAM-DL-03-0017396</span>
           <span>GSTIN: 07AUMPY7612E1Z8</span>
@@ -72,7 +60,7 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop Nav */}
-        <ul className="hidden md:flex items-center gap-8 lg:gap-12 font-serif text-gray-800 text-base lg:text-lg">
+        <ul className="hidden md:flex items-center gap-5 lg:gap-12 font-serif text-gray-800 text-base lg:text-lg">
           {navLinks.map((link) => (
             <li
               key={link.name}
@@ -95,12 +83,12 @@ const Navbar = () => {
             <FaSearch size={18} />
           </button>
 
-          {/* Brochure */}
+          {/* Get a Quote Button */}
           <button
-            onClick={handleBrochureDownload}
+            onClick={() => setQuoteOpen(true)}
             className="bg-red-700 text-white px-3 md:px-4 py-1.5 rounded-full hover:bg-red-800 transition duration-300 flex items-center gap-2 text-sm md:text-base"
           >
-            <FaFileAlt /> Brochure
+            Get a Quote
           </button>
 
           {/* Mobile Toggle */}
@@ -149,6 +137,73 @@ const Navbar = () => {
           </div>
         )}
       </nav>
+
+      {/* 🔹 Quote Form Modal */}
+      {quoteOpen && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-[1000]">
+          <div className="bg-white w-[95%] max-w-lg rounded-2xl shadow-2xl p-6 relative">
+            <button
+              onClick={() => setQuoteOpen(false)}
+              className="absolute top-3 right-3 text-2xl text-gray-600 hover:text-red-700"
+            >
+              &times;
+            </button>
+            <h2 className="text-2xl font-bold text-red-700 mb-4">
+              Get a Quote
+            </h2>
+            <form
+              action="https://formsubmit.co/emcopowers@gmail.com"
+              method="POST"
+              className="flex flex-col gap-4"
+            >
+              {/* Hidden to redirect to website after submit */}
+              <input type="hidden" name="_next" value="https://www.emcopowersupport.com/thank-you" />
+              <input type="hidden" name="_captcha" value="false" />
+
+              <input
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                required
+                className="border p-2 rounded-lg w-full"
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                required
+                className="border p-2 rounded-lg w-full"
+              />
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Your Phone Number"
+                required
+                className="border p-2 rounded-lg w-full"
+              />
+              <input
+                type="text"
+                name="address"
+                placeholder="Your Address"
+                className="border p-2 rounded-lg w-full"
+              />
+              <textarea
+                name="message"
+                placeholder="Your Message"
+                required
+                rows="4"
+                className="border p-2 rounded-lg w-full"
+              ></textarea>
+              <button
+                type="submit"
+                className="bg-red-700 text-white py-2 rounded-full hover:bg-red-800 transition"
+              >
+                Submit
+              </button>
+            </form>
+          </div>
+        </div>
+      )}
     </header>
   );
 };
